@@ -1,0 +1,12 @@
+amt=900
+max_offer=100
+pct=.10
+offer_amt=amt*pct
+if (max_offer<offer_amt) | (max_offer==offer_amt):
+    print("giving offer of ",max_offer)
+    addon_offer_amt=-50
+    additional_cashback=amt+addon_offer_amt if amt>100 else amt
+    print("amount to pay is",additional_cashback-max_offer)
+else:
+    print("giving offer of ",offer_amt)
+    print("amount to pay is",amt-offer_amt)
